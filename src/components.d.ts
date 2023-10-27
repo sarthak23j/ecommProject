@@ -6,56 +6,142 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface ContentCart {
+    }
+    interface ContentHome {
+    }
+    interface ContentLogin {
+    }
+    interface ContentProducts {
+    }
+    interface EcommApp {
+    }
+    interface EcommFinapp {
+    }
+    interface EcommFooter {
+    }
+    interface EcommHeader {
+    }
+    interface NotfoundPage {
     }
 }
+export interface EcommHeaderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLEcommHeaderElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLContentCartElement extends Components.ContentCart, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLContentCartElement: {
+        prototype: HTMLContentCartElement;
+        new (): HTMLContentCartElement;
+    };
+    interface HTMLContentHomeElement extends Components.ContentHome, HTMLStencilElement {
+    }
+    var HTMLContentHomeElement: {
+        prototype: HTMLContentHomeElement;
+        new (): HTMLContentHomeElement;
+    };
+    interface HTMLContentLoginElement extends Components.ContentLogin, HTMLStencilElement {
+    }
+    var HTMLContentLoginElement: {
+        prototype: HTMLContentLoginElement;
+        new (): HTMLContentLoginElement;
+    };
+    interface HTMLContentProductsElement extends Components.ContentProducts, HTMLStencilElement {
+    }
+    var HTMLContentProductsElement: {
+        prototype: HTMLContentProductsElement;
+        new (): HTMLContentProductsElement;
+    };
+    interface HTMLEcommAppElement extends Components.EcommApp, HTMLStencilElement {
+    }
+    var HTMLEcommAppElement: {
+        prototype: HTMLEcommAppElement;
+        new (): HTMLEcommAppElement;
+    };
+    interface HTMLEcommFinappElement extends Components.EcommFinapp, HTMLStencilElement {
+    }
+    var HTMLEcommFinappElement: {
+        prototype: HTMLEcommFinappElement;
+        new (): HTMLEcommFinappElement;
+    };
+    interface HTMLEcommFooterElement extends Components.EcommFooter, HTMLStencilElement {
+    }
+    var HTMLEcommFooterElement: {
+        prototype: HTMLEcommFooterElement;
+        new (): HTMLEcommFooterElement;
+    };
+    interface HTMLEcommHeaderElement extends Components.EcommHeader, HTMLStencilElement {
+    }
+    var HTMLEcommHeaderElement: {
+        prototype: HTMLEcommHeaderElement;
+        new (): HTMLEcommHeaderElement;
+    };
+    interface HTMLNotfoundPageElement extends Components.NotfoundPage, HTMLStencilElement {
+    }
+    var HTMLNotfoundPageElement: {
+        prototype: HTMLNotfoundPageElement;
+        new (): HTMLNotfoundPageElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "content-cart": HTMLContentCartElement;
+        "content-home": HTMLContentHomeElement;
+        "content-login": HTMLContentLoginElement;
+        "content-products": HTMLContentProductsElement;
+        "ecomm-app": HTMLEcommAppElement;
+        "ecomm-finapp": HTMLEcommFinappElement;
+        "ecomm-footer": HTMLEcommFooterElement;
+        "ecomm-header": HTMLEcommHeaderElement;
+        "notfound-page": HTMLNotfoundPageElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface ContentCart {
+    }
+    interface ContentHome {
+    }
+    interface ContentLogin {
+    }
+    interface ContentProducts {
+    }
+    interface EcommApp {
+    }
+    interface EcommFinapp {
+    }
+    interface EcommFooter {
+    }
+    interface EcommHeader {
+        "onMenuChange"?: (event: EcommHeaderCustomEvent<string>) => void;
+        "onSearchChange"?: (event: EcommHeaderCustomEvent<any>) => void;
+    }
+    interface NotfoundPage {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "content-cart": ContentCart;
+        "content-home": ContentHome;
+        "content-login": ContentLogin;
+        "content-products": ContentProducts;
+        "ecomm-app": EcommApp;
+        "ecomm-finapp": EcommFinapp;
+        "ecomm-footer": EcommFooter;
+        "ecomm-header": EcommHeader;
+        "notfound-page": NotfoundPage;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "content-cart": LocalJSX.ContentCart & JSXBase.HTMLAttributes<HTMLContentCartElement>;
+            "content-home": LocalJSX.ContentHome & JSXBase.HTMLAttributes<HTMLContentHomeElement>;
+            "content-login": LocalJSX.ContentLogin & JSXBase.HTMLAttributes<HTMLContentLoginElement>;
+            "content-products": LocalJSX.ContentProducts & JSXBase.HTMLAttributes<HTMLContentProductsElement>;
+            "ecomm-app": LocalJSX.EcommApp & JSXBase.HTMLAttributes<HTMLEcommAppElement>;
+            "ecomm-finapp": LocalJSX.EcommFinapp & JSXBase.HTMLAttributes<HTMLEcommFinappElement>;
+            "ecomm-footer": LocalJSX.EcommFooter & JSXBase.HTMLAttributes<HTMLEcommFooterElement>;
+            "ecomm-header": LocalJSX.EcommHeader & JSXBase.HTMLAttributes<HTMLEcommHeaderElement>;
+            "notfound-page": LocalJSX.NotfoundPage & JSXBase.HTMLAttributes<HTMLNotfoundPageElement>;
         }
     }
 }

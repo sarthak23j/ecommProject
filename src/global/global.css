@@ -1,0 +1,17 @@
+:root{
+    --hue:200;
+    --sat:75%;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+
+    background-color: hsl(var(--hue),var(--sat),100%);
+    color: hsl(var(--hue),var(--sat),25%);
+
+    font-family: Arial, Helvetica, sans-serif;
+}

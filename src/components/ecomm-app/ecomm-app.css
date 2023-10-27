@@ -1,0 +1,14 @@
+:root{
+  --hue:200;
+  --sat:75;
+  --clr-bg:hsl(200,75,50);
+}
+
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: var(--clr-bg);
+}
